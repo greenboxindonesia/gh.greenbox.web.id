@@ -1,19 +1,16 @@
 <?php
-
-
 $name=$_POST['name'];
 $email=$_POST['email'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
 
-
-$to='yourname@mail.com';
+$to='aank84@gmail.com';
 
 $headers = 'From: '.$name."\r\n" .
 	'Reply-To: '.$email."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 $subject = $subject;
-$body='You have got a new message from the contact form on your website - Applechic.'."\n\n";
+$body='You have got a new message from the contact form on your website - gh.greenbox.web.id'."\n\n";
 
 $body.='Name: '.$name."\n";
 $body.='Email: '.$email."\n";
@@ -21,9 +18,8 @@ $body.='Subject: '.$subject."\n";
 $body.='Message: '."\n".$message."\n";
 	
 if(mail($to, $subject, $body, $headers)) {
-	die('Message sent.');
+	die('Pesan Terkirim.');
 } else {
-	die('Error: Mail failed');
+	die('Error: Pesan Gagal/ Tidak terkirim');
 }
-
 ?>
